@@ -51,7 +51,7 @@ public class BookController {
 
     @Operation(summary = "Return Book", description = "This API use to return a book")
     @PostMapping("/{bookId}/return")
-    public ResponseEntity<BookRes> borrow(@PathVariable long bookId) {
+    public ResponseEntity<BookRes> returnBook(@PathVariable long bookId) {
         return ResponseEntity.ok(bookMapper.toRes(bookService.returnBook(bookId)));
     }
 }
